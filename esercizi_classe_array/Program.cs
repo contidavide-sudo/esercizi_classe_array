@@ -30,19 +30,31 @@
 
             Console.WriteLine();
 
-            //3
+            //3 e 4
 
             int[] numD = { 4, 7, 8, 2, 9 };
+
+            int contaP = 0, contaD = 0;
 
             for (int i = 0; i < numD.Length; i++)
             {
                 if (numD[i] % 2 == 1)
                 {
-                    Console.Write("[" + numD[i] + "]");
+                    Console.Write($"[{numD[i]}]");
+
+                    contaD = contaD + 1;
+                }
+                else
+                {
+                    contaP = contaP + 1;
                 }
 
             }
 
+            Console.WriteLine();
+
+            Console.WriteLine("Numeri pari: " + contaP);
+            Console.WriteLine("Numeri dispari: " + contaD);
         }
     }
 }
