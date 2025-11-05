@@ -55,6 +55,55 @@
 
             Console.WriteLine("Numeri pari: " + contaP);
             Console.WriteLine("Numeri dispari: " + contaD);
+
+            //6
+
+            int[] v1 = { 3, 8, 6, 2, 9, 7 };
+
+            int x = 5, contaMag = 0, contaMin = 0;
+
+            for(int i=0;  i<v1.Length; i++)
+            {
+                if(v1[i] < x)
+                {
+                    contaMin = contaMin + 1;
+                }
+                else
+                {
+                    contaMag = contaMag + 1;
+                }
+            }
+
+            int[] v2 = new int[contaMin];
+            int[] v3 = new int[contaMag];
+
+            int indMag = 0, indMin = 0;
+
+            for(int i=0; i<v1.Length; i++)
+            {
+                if (v1[i] < x)
+                {
+                    v2[indMin] = v1[i];
+                    indMin = indMin + 1;
+                }
+                else
+                {
+                    v3[indMag] = v1[i];
+                    indMag = indMag + 1;
+                }
+            }
+
+            for(int i=0; i<v2.Length; i++)
+            {
+                Console.Write($"[{v2[i]}]");
+            }
+
+            Console.WriteLine();
+
+            for (int i = 0; i < v3.Length; i++)
+            {
+                Console.Write($"[{v3[i]}]");
+            }
         }
     }
 }
